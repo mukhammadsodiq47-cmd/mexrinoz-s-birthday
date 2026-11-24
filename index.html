@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Для моей дорогой сестры 💗</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #fff8f5, #f8e5e8);
+  color: #674b50;
+  font-family: Georgia, serif;
+  overflow-x: hidden;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 30px 17px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  animation: appear 0.9s ease;
+}
+
+.page.active {
+  display: flex;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #9b626d;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.envelope {
+  position: relative;
+  width: 270px;
+  height: 175px;
+  margin: 35px auto;
+  background: #e9bfc5;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 12px 30px #b9898940;
+}
+
+.envelope:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f3d5d8;
+  clip-path: polygon(0 0, 50% 58%, 100% 0);
+  transform-origin: top;
+  transition: transform 1s;
+  z-index: 3;
+}
+
+.envelope.open:before {
+  transform: rotateX(180deg);
+}
+
+.envelope:after {
+  content: "💗";
+  position: absolute;
+  top: 65px;
+  left: 116px;
+  font-size: 38px;
+  z-index: 4;
+}
+
+.hint {
+  font-size: 14px;
+  color: #a77b80;
+}
+
+.letter {
+  width: 100%;
+  max-width: 540px;
+  background: #fffdf9;
+  padding: 27px 22px;
+  border: 1px solid #f0dadd;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px #a77b8018;
+  text-align: left;
+}
+
+.letter h2 {
+  text-align: center;
+  font-weight: normal;
+  color: #a76572;
+  margin-top: 0;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.letter p {
+  font-size: 16px;
+  line-height: 1.85;
+  margin: 0 0 18px;
+}
+
+button {
+  margin-top: 27px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  background: #c98f9b;
+  color: white;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #c98f9b35;
+}
+
+button:active {
+  transform: scale(.97);
+}
+
+.final-heart {
+  font-size: 55px;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  50% { transform: scale(1.15); }
+}
+
+.flower {
+  position: fixed;
+  top: -30px;
+  pointer-events: none;
+  animation: fall 7s linear forwards;
+  z-index: 10;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.signature {
+  text-align: center;
+  color: #a76572;
+  font-size: 20px;
+  margin-top: 25px;
+  padding-bottom: 20px;
+}
+
+.decoration {
+  font-size: 25px;
+  margin: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- СТРАНИЦА 1: КОНВЕРТ -->
+<section class="page active" id="page1">
+
+  <div class="decoration">🌷 🤍 🌷</div>
+
+  <h1>Для моей дорогой сестры</h1>
+
+  <p>У меня есть кое-что для тебя... 💌</p>
+
+  <div class="envelope" id="envelope" onclick="openLetter()"></div>
+
+  <div class="hint">Нажми на конверт, чтобы открыть письмо 💗</div>
+
+</section>
+
+
+<!-- СТРАНИЦА 2: ПЕРВОЕ ПИСЬМО -->
+<section class="page" id="page2">
+
+  <div class="letter">
+
+    <h2>🌷 Моя дорогая сестра! 🌷</h2>
+
+    <p>С днём рождения! 🎂💗</p>
+
+    <p>Я не всегда умею говорить о своих чувствах вслух, но сегодня хочу сказать тебе то, что, возможно, не говорю достаточно часто. 🥹</p>
+
+    <p>Я очень сильно тебя люблю и безумно дорожу тобой. ❤️ Ты для меня не просто старшая сестра. Ты всегда была мне словно вторая мама: заботилась обо мне, переживала, выслушивала, поддерживала и старалась помочь, когда мне это было нужно. Я очень ценю всё, что ты для меня делаешь. 🌸</p>
+
+    <p>Иногда я вспоминаю, как ты меня ругала. Раньше я, возможно, не всегда понимал тебя, но теперь осознаю, что за каждым твоим замечанием стояли забота, переживание и желание для меня самого лучшего. И сейчас я даже рад, что ты не оставляла меня без внимания и всегда старалась направить на правильный путь. ❤️</p>
+
+    <p>Спасибо тебе за твоё доброе сердце, терпение, заботу и за то, что я всегда могу поговорить с тобой и почувствовать твою поддержку. Мне очень повезло иметь такую сестру. 🥹💗</p>
+
+  </div>
+
+  <button onclick="showPage(3)">Продолжить 💌</button>
+
+</section>
+
+
+<!-- СТРАНИЦА 3: ПОЖЕЛАНИЯ -->
+<section class="page" id="page3">
+
+  <div class="letter">
+
+    <h2>💗 От всего сердца 💗</h2>
+
+    <p>Я искренне благодарен Аллаху за то, что Он подарил мне именно такую сестру, как ты. 🤲🏻</p>
+
+    <p>Пусть Аллах оберегает тебя, дарует тебе крепкое здоровье, спокойствие в душе, счастье и благополучие. Пусть в вашей семье всегда будут любовь, баракат и спокойствие. 🏡❤️</p>
+
+    <p>Желаю, чтобы ваш дом всегда был наполнен счастьем, чтобы твой сыночек рос здоровым и счастливым, а рядом всегда были самые дорогие люди. 👨‍👩‍👦💞</p>
+
+    <p>Пусть все твои добрые желания исполняются, а каждый новый год жизни приносит только хорошее. Будь самой счастливой женщиной на свете! 🌸✨</p>
+
+    <p>Я молюсь о том, чтобы Аллах сохранил нашу любовь и близость не только в этой жизни, но и чтобы, иншаАллах, мы были вместе и в Раю. 🤲🏻🤍</p>
+
+    <p>Я очень сильно тебя люблю. И всегда буду благодарен за то, что ты есть в моей жизни. 🥹❤️</p>
+
+    <p style="text-align:center"><b>С днём рождения, моя дорогая сестра! 🎂🌷</b></p>
+
+  </div>
+
+  <div class="signature">
+
+    <div class="decoration">🌸 ✨ 🌸</div>
+
+    <div class="final-heart">💗</div>
+
+    Люблю тебя ❤️
+
+    <p style="font-size:14px">От твоего младшего брата 🫂</p>
+
+    <div class="decoration">🤍 🌷 🤍</div>
+
+  </div>
+
+</section>
+
+
+<script>
+
+function showPage(number) {
+
+  document.querySelectorAll(".page").forEach(page => {
+    page.classList.remove("active");
+  });
+
+  document.getElementById("page" + number).classList.add("active");
+
+  if (number === 3) {
+    makeFlowers();
+  }
+
+  window.scrollTo(0, 0);
+
+}
+
+
+function openLetter() {
+
+  document.getElementById("envelope").classList.add("open");
+
+  setTimeout(() => {
+    showPage(2);
+  }, 1100);
+
+}
+
+
+function makeFlowers() {
+
+  for (let i = 0; i < 30; i++) {
+
+    setTimeout(() => {
+
+      const flower = document.createElement("div");
+
+      flower.className = "flower";
+
+      flower.textContent = ["🌸", "💗", "🌷", "✨"][
+        Math.floor(Math.random() * 4)
+      ];
+
+      flower.style.left = Math.random() * 100 + "vw";
+
+      flower.style.fontSize = (15 + Math.random() * 15) + "px";
+
+      flower.style.animationDuration = (5 + Math.random() * 4) + "s";
+
+      document.body.appendChild(flower);
+
+      setTimeout(() => flower.remove(), 9000);
+
+    }, i * 250);
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
